@@ -28,14 +28,14 @@
                     <TextBlock
                         Margin="10,0,0,0"
                         Style="{StaticResource BodyStrongTextBlockStyle}"
-                        Text="{Binding Title}" AutomationProperties.HeadingLevel="Level3" />
+                        Text="{Binding Title}" AutomationProperties.HeadingLevel="Level3" AutomationProperties.Name="{Binding Title}" />
                     <TextBlock
                         Width="240"
                         Margin="10,0,0,0"
                         Foreground="{DynamicResource TextFillColorPrimaryBrush}"
                             Opacity="0.7"
-                        Style="{StaticResource CaptionTextBlockStyle}"
-                        Text="{Binding Description}"/>
+                        Style="{StaticResource CaptionTextBlockStyle}" AutomationProperties.HeadingLevel="Level9"
+                        Text="{Binding Description}" AutomationProperties.Name="{Binding Description}" />
                 </StackPanel>
             </StackPanel>
         </Button>
