@@ -1,4 +1,5 @@
-﻿using System.Windows.Documents;
+﻿using System.Windows.Controls.Primitives;
+using System.Windows.Documents;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -19,4 +20,14 @@ namespace WPFGallery.Views;
 
         InitializeComponent();
     }
+
+    private void CalendarPage_Loaded(object sender, RoutedEventArgs e)
+    {
+        CalendarItem? calendarItem = DefaultCalendar.Template?.FindName("PART_CalendarItem", DefaultCalendar) as CalendarItem;
+        Button? prevBtn = calendarItem!.Template?.FindName("PART_PreviousButton", calendarItem) as Button;
+        Button? nextBtn = calendarItem!.Template?.FindName("PART_NextButton", calendarItem) as Button;
+
+        prevBtn!.ToolTip = "Previous Button";
+        nextBtn!.ToolTip = "Next Button";
     }
+}
